@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80000000">
+
+    <RelativeLayout
+        android:id="@+id/popup_anima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog"
+        android:layout_centerInParent="true"
+        android:layout_margin="25dp">
+
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="30dp"
+            android:textSize="16sp"
+            android:textColor="@color/theme_text"
+            android:lineSpacingMultiplier="1.2"
+            android:gravity="center"
+            android:text="该用户的申请已被拒绝多次，暂无权限进行贷款申请。"
+            />
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_below="@id/content"
+            android:background="@color/theme_line"
+            />
+
+        <LinearLayout
+            android:layout_below="@id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/ok"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:padding="3dp"
+                android:textColor="@color/theme_focus"
+                android:textSize="14sp"
+                android:layout_below="@id/line2"
+                android:text="我知道了"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

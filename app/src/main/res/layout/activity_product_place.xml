@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.jlkf.jdsaleside.home.activitys.ProductTypeActivity">
+
+    <include layout="@layout/aaa_app_title" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="266dp">
+
+        <LinearLayout
+            android:id="@+id/search_ll"
+            android:background="@drawable/shape_rect_2"
+            android:layout_margin="@dimen/theme_padding"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+            <TextView
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/theme_padding"
+                android:hint="搜索公司名称"
+                android:textColorHint="@color/theme_text_grey"
+                android:textColor="@color/theme_title"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="@dimen/theme_text_14"
+                android:background="@null"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:paddingRight="@dimen/theme_padding_10"
+                android:id="@+id/search_iv"
+                android:src="@mipmap/icon_map_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:paddingLeft="@dimen/theme_padding"
+        android:paddingTop="@dimen/theme_padding_10"
+        android:paddingBottom="@dimen/theme_padding_10"
+        android:background="@color/theme_white"
+        android:text="请选择所在的装修公司"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_marginLeft="@dimen/theme_padding"
+        android:layout_marginRight="@dimen/theme_padding"
+        style="@style/ViewStyle" />
+    
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/product_rv"
+        android:paddingLeft="@dimen/theme_padding"
+        android:paddingRight="@dimen/theme_padding"
+        android:background="@color/theme_white"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"/>
+
+    <TextView
+        android:gravity="center"
+        android:textColor="@color/theme_white"
+        android:textSize="18sp"
+        android:text="下一步"
+        android:background="@color/theme_focus"
+        android:id="@+id/next_tv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+</LinearLayout>

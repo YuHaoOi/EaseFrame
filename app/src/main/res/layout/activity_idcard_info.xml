@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jlkf.jdsaleside.home.activitys.IDCardInfoActivity">
+
+    <include layout="@layout/aaa_app_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/theme_white"
+                android:paddingLeft="@dimen/theme_padding"
+                android:paddingTop="@dimen/theme_padding_20"
+                android:text="请上传借款人的身份证正反面照片"
+                android:textColor="@color/theme_focus"
+                android:textSize="@dimen/theme_text_16sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/card_rv"
+                android:layout_width="match_parent"
+                android:layout_height="209dp"
+                android:background="@color/theme_white"
+                android:paddingRight="@dimen/theme_padding_20" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/theme_padding_10"
+                android:layout_marginLeft="@dimen/theme_padding_25"
+                android:layout_marginTop="@dimen/theme_padding_10"
+                android:text="请核对信息是否正确："
+                android:textColor="@color/theme_text_grey" />
+
+            <RelativeLayout style="@style/IdcardRl">
+
+                <TextView
+                    style="@style/idCardTitle"
+                    android:text="姓名:" />
+
+                <com.jlkf.jdsaleside.home.widgets.ClearEditText
+                    android:id="@+id/name_ev"
+                    android:text="你好呀"
+                    style="@style/IdcardEdit" />
+
+                <View
+                    style="@style/ViewStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/theme_padding"
+                    android:layout_marginRight="@dimen/theme_padding" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout style="@style/IdcardRl">
+
+                <TextView
+                    style="@style/idCardTitle"
+                    android:text="身份证号:" />
+
+
+                <TextView
+                    style="@style/IdcardTv"
+                    android:text="111111111111" />
+
+                <View
+                    style="@style/ViewStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/theme_padding"
+                    android:layout_marginRight="@dimen/theme_padding" />
+
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/IdcardRl">
+
+                <TextView
+                    style="@style/idCardTitle"
+                    android:text="性别:" />
+
+
+                <TextView
+                    style="@style/IdcardTv"
+                    android:text="男" />
+
+                <View
+                    style="@style/ViewStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/theme_padding"
+                    android:layout_marginRight="@dimen/theme_padding" />
+
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/IdcardRl">
+
+                <TextView
+                    style="@style/idCardTitle"
+                    android:text="民族:" />
+
+
+                <TextView
+                    style="@style/IdcardTv"
+                    android:text="男" />
+
+                <View
+                    style="@style/ViewStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/theme_padding"
+                    android:layout_marginRight="@dimen/theme_padding" />
+
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/IdcardRl">
+
+                <TextView
+                    style="@style/idCardTitle"
+                    android:text="出生日期:" />
+
+
+                <TextView
+                    style="@style/IdcardTv"
+                    android:text="男" />
+
+                <View
+                    style="@style/ViewStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/theme_padding"
+                    android:layout_marginRight="@dimen/theme_padding" />
+
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/IdcardRl">
+
+                <TextView
+                    style="@style/idCardTitle"
+                    android:text="住址:" />
+
+                <com.jlkf.jdsaleside.home.widgets.ClearEditText
+                    android:text="广东省深圳市南山区深南大道号XX大厦12楼"
+                    style="@style/IdcardEdit" />
+
+                <View
+                    style="@style/ViewStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/theme_padding"
+                    android:layout_marginRight="@dimen/theme_padding" />
+
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/IdcardRl">
+
+                <TextView
+                    style="@style/idCardTitle"
+                    android:text="有效期:" />
+
+
+                <TextView
+                    style="@style/IdcardTv"
+                    android:text="男" />
+
+                <View
+                    style="@style/ViewStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/theme_padding"
+                    android:layout_marginRight="@dimen/theme_padding" />
+
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/IdcardRl">
+
+                <TextView
+                    style="@style/idCardTitle"
+                    android:text="签发机关:" />
+
+                <com.jlkf.jdsaleside.home.widgets.ClearEditText
+                    android:text="广东省深圳市南山区深南大道"
+                    style="@style/IdcardEdit" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/theme_padding_10"
+                android:gravity="center"
+                android:textColor="@color/theme_white"
+                android:textSize="18sp"
+                android:text="下一步"
+                android:background="@color/theme_focus"
+                android:id="@+id/next_tv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jlkf.jdsaleside.home.activitys.IDCardInfoActivity">
+
+    <include layout="@layout/aaa_app_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:background="@color/theme_white"
+                android:paddingBottom="@dimen/theme_padding_30"
+                android:paddingTop="@dimen/theme_padding_30"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@mipmap/icon_add_idcard"
+                    android:layout_width="252dp"
+                    android:layout_height="160dp" />
+
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/theme_padding_10"
+                android:layout_marginLeft="@dimen/theme_padding_25"
+                android:layout_marginTop="@dimen/theme_padding_10"
+                android:text="请核对信息是否正确："
+                android:textColor="@color/theme_text_grey" />
+
+            <RelativeLayout style="@style/IdcardRl">
+
+                <TextView
+                    style="@style/idCardTitle"
+                    android:text="持卡人:" />
+
+                <TextView
+                    android:layout_marginLeft="135dp"
+                    style="@style/IdcardTv"
+                    android:text="小子" />
+
+                <View
+                    style="@style/ViewStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/theme_padding"
+                    android:layout_marginRight="@dimen/theme_padding" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout style="@style/IdcardRl">
+
+                <TextView
+                    style="@style/idCardTitle"
+                    android:text="银行卡号:" />
+
+
+                <TextView
+                    android:layout_marginLeft="135dp"
+                    style="@style/IdcardTv"
+                    android:text="111111111111" />
+
+                <View
+                    style="@style/ViewStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/theme_padding"
+                    android:layout_marginRight="@dimen/theme_padding" />
+
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/IdcardRl">
+
+                <TextView
+                    style="@style/idCardTitle"
+                    android:text="开户行名称:" />
+
+
+                <TextView
+                    android:layout_marginLeft="135dp"
+                    style="@style/IdcardTv"
+                    android:text="男" />
+
+                <ImageView
+                    android:id="@+id/right_iv"
+                    android:layout_marginRight="@dimen/theme_padding"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/icon_enter" />
+
+                <View
+                    style="@style/ViewStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/theme_padding"
+                    android:layout_marginRight="@dimen/theme_padding" />
+
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/IdcardRl">
+
+                <TextView
+                    style="@style/idCardTitle"
+                    android:text="持卡人手机号:" />
+
+
+                <EditText
+                    android:id="@+id/phone_et"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:layout_marginLeft="135dp"
+                    android:textColorHint="@color/theme_text_grey"
+                    android:hint="请输入银行预留手机号"
+                    style="@style/IdcardEdit"
+                    />
+
+                <View
+                    style="@style/ViewStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/theme_padding"
+                    android:layout_marginRight="@dimen/theme_padding" />
+
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/IdcardRl">
+
+                <TextView
+                    style="@style/idCardTitle"
+                    android:text="验证码:" />
+
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    style="@style/IdcardEdit"
+                    android:layout_marginLeft="135dp"
+                    android:textColorHint="@color/theme_text_grey"
+                    android:hint="请输入验证码" />
+
+                <TextView
+                    android:id="@+id/send_tv"
+                    android:layout_marginRight="@dimen/theme_padding"
+                    android:layout_alignParentRight="true"
+                    android:text="发送验证码"
+                    android:textColor="@color/theme_focus"
+                    style="@style/IdcardTv" />
+
+                <View
+                    style="@style/ViewStyle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/theme_padding"
+                    android:layout_marginRight="@dimen/theme_padding" />
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_marginTop="@dimen/theme_padding_10"
+                android:gravity="center"
+                android:textColor="@color/theme_white"
+                android:textSize="18sp"
+                android:text="下一步"
+                android:background="@color/theme_focus"
+                android:id="@+id/next_tv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/theme_white"
+    android:gravity="center_vertical">
+
+
+    <TextView
+        android:id="@+id/name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/theme_padding_25"
+        android:gravity="center"
+        android:text="产品类型"
+        android:textColor="@color/theme_text" />
+
+    <ImageView
+        android:id="@+id/right_iv"
+        android:layout_marginRight="@dimen/theme_padding"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:src="@mipmap/icon_enter" />
+
+    <TextView
+        android:id="@+id/info_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="请选择产品类型"
+        android:layout_marginLeft="160dp"
+        android:textSize="@dimen/theme_text_small"
+        android:textColor="@color/theme_text_grey" />
+
+    <EditText
+        android:visibility="gone"
+        android:id="@+id/info_ev"
+        android:background="@null"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:inputType="number"
+        android:maxLength="10"
+        android:hint="请输入贷款金额"
+        android:layout_marginLeft="160dp"
+        android:textColorHint="@color/theme_text_grey"
+        android:textSize="@dimen/theme_text_small"
+        android:textColor="@color/theme_text" />
+
+    <View
+        android:id="@+id/bottom_line"
+        style="@style/ViewStyle"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>
