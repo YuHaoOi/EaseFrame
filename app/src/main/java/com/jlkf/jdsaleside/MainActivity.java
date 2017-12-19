@@ -73,6 +73,11 @@ public class MainActivity extends BaseActivity {
                     }
                 }
             });
+        } else {
+            fileMaker = FileMaker.getInstance();
+            fileMaker.setMainPath(getString(R.string.app_name));
+            fileMaker.createFolder(AppSet.FOLDER_DATA, "data");
+            fileMaker.createFolder(AppSet.FOLDER_IMAGE, "image");
         }
     }
 
