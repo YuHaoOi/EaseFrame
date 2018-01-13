@@ -33,38 +33,36 @@ public class ShareUtils {
         sp=application.getSharedPreferences(application.getPackageName(), Context.MODE_PRIVATE);
     }
 
-    public void setFlag(String flag, boolean bool){
+    public void setBoolean(String flag, boolean bool){
         sp.edit().putBoolean(flag,bool).apply();
     }
 
-    public boolean getFlag(String flag, boolean defaultFlag){
+    public boolean getBoolean(String flag, boolean defaultFlag){
         return sp.getBoolean(flag,defaultFlag);
     }
 
 
-    public void setCache(String key, String value){
+    public void saveString(String key, String value){
         sp.edit().putString(key,value).apply();
     }
 
-    public void setCache(String key, long value){
+    public void saveLong(String key, long value){
         sp.edit().putLong(key,value).apply();
     }
 
-    public void setCache(String key, int value){
+    public void saveInt(String key, int value){
         sp.edit().putInt(key,value).apply();
     }
 
-    public String getCache(String key){
+    public String getString(String key){
         return sp.getString(key,null);
     }
-    public long getCacheLong(String key){
-        return sp.getLong(key, System.currentTimeMillis());
-    }
-    public long getCache(String key, long value){
+
+    public long getLong(String key, long value){
         return sp.getLong(key,value);
     }
 
-    public int getCache(String key, int value){
+    public int getInt(String key, int value){
         return sp.getInt(key,value);
     }
 }
