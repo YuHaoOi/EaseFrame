@@ -54,36 +54,4 @@ public class AppManager {
             }
         }
     }
-
-    public static void quitExceptMain() {
-        if (activitys.size() != 0) {
-            Iterator<Activity> aIterator = activitys.iterator();
-            while (aIterator.hasNext()) {
-                Activity activity = aIterator.next();
-                if (activity != null && !activity.isFinishing()) {
-                    if (activity instanceof MainActivity) {
-                    } else {
-                        activity.finish();
-                    }
-                }
-            }
-        }
-    }
-
-    public static void quitJustLogin() {
-        if (activitys.size() != 0) {
-            Iterator<Activity> aIterator = activitys.iterator();
-            while (aIterator.hasNext()) {
-                Activity activity = aIterator.next();
-                if (activity != null && !activity.isFinishing()) {
-                    if (activity instanceof MainActivity) {
-                    } else if (activity instanceof MainActivity) {
-
-                    } else {
-                        activity.finish();
-                    }
-                }
-            }
-        }
-    }
 }

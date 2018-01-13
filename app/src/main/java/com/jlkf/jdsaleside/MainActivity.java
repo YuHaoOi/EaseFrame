@@ -15,7 +15,7 @@ import com.jlkf.jdsaleside.mine.MineFragment;
 import com.jlkf.jdsaleside.msg.MsgFragment;
 import com.jlkf.jdsaleside.other.adapters.MyPagerAdapter;
 import com.jlkf.jdsaleside.other.base.BaseActivity;
-import com.jlkf.jdsaleside.other.base.util.AppSet;
+import com.jlkf.jdsaleside.other.base.util.OiConstants;
 import com.jlkf.jdsaleside.other.base.util.FileMaker;
 import com.jlkf.jdsaleside.other.utils.StatusBarUtil;
 import com.jlkf.jdsaleside.other.utils.TabEntity;
@@ -66,8 +66,9 @@ public class MainActivity extends BaseActivity {
                     if (permission.granted) {
                         fileMaker = FileMaker.getInstance();
                         fileMaker.setMainPath(getString(R.string.app_name));
-                        fileMaker.createFolder(AppSet.FOLDER_DATA, "data");
-                        fileMaker.createFolder(AppSet.FOLDER_IMAGE, "image");
+                        fileMaker.createFolder(OiConstants.FOLDER_DATA, "data");
+                        fileMaker.createFolder(OiConstants.FOLDER_IMAGE, "image");
+                        fileMaker.createFolder(OiConstants.FOLDER_CACHE, "cache");
                     } else if (permission.shouldShowRequestPermissionRationale) {
                     } else {
                     }
@@ -76,8 +77,9 @@ public class MainActivity extends BaseActivity {
         } else {
             fileMaker = FileMaker.getInstance();
             fileMaker.setMainPath(getString(R.string.app_name));
-            fileMaker.createFolder(AppSet.FOLDER_DATA, "data");
-            fileMaker.createFolder(AppSet.FOLDER_IMAGE, "image");
+            fileMaker.createFolder(OiConstants.FOLDER_DATA, "data");
+            fileMaker.createFolder(OiConstants.FOLDER_IMAGE, "image");
+            fileMaker.createFolder(OiConstants.FOLDER_CACHE, "cache");
         }
     }
 
