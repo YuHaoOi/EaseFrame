@@ -33,7 +33,7 @@ public class ShareUtils {
         sp=application.getSharedPreferences(application.getPackageName(), Context.MODE_PRIVATE);
     }
 
-    public void setBoolean(String flag, boolean bool){
+    public void saveBoolean(String flag, boolean bool){
         sp.edit().putBoolean(flag,bool).apply();
     }
 

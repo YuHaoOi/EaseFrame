@@ -9,4 +9,5 @@ public class OiConstants {
     public static final int FOLDER_IMAGE=103;
 
     public static final String FLAG_USERNAME="userName";
+    public static final String FLAG_IS_FIRST = "flag_is_first";
 }

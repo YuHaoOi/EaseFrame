@@ -10,6 +10,7 @@ package com.jlkf.jdsaleside.other.base.util;
 public class AppState {
 
     private String userName;
+    private boolean isFirstIn;
     private static AppState appState;
 
     private AppState(){}
@@ -33,5 +34,15 @@ public class AppState {
     public void setUserName(String userName) {
         this.userName = userName;
         ShareUtils.getInstance().saveString(OiConstants.FLAG_USERNAME, userName);
+    }
+
+    public boolean isFirstIn(){
+        isFirstIn = ShareUtils.getInstance().getBoolean(OiConstants.FLAG_IS_FIRST, true);
+        return isFirstIn;
+    }
+
+    public void setFirstIn(){
+        isFirstIn = false;
+        ShareUtils.getInstance().saveBoolean(OiConstants.FLAG_IS_FIRST, false);
     }
 }
