@@ -79,7 +79,7 @@ public class StartActivity extends BaseActivity {
         set.addListener(new AnimatorListenerAdapter() {
             @Override
             public void onAnimationEnd(Animator animation) {
-                MainActivity.actionStart(StartActivity.this);
+                LoginOneActivity.actionStart(StartActivity.this);
                 finish();
             }
         });

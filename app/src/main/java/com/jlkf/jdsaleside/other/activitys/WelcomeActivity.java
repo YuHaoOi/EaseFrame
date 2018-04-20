@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 
-import com.jlkf.jdsaleside.MainActivity;
 import com.jlkf.jdsaleside.R;
 import com.jlkf.jdsaleside.other.adapters.GuideViewPagerAdapter;
 import com.jlkf.jdsaleside.other.base.BaseActivity;
@@ -64,7 +63,7 @@ public class WelcomeActivity extends BaseActivity {
                     @Override
                     public void onClick(View view) {
                         AppState.getInstance().setFirstIn();
-                        MainActivity.actionStart(WelcomeActivity.this);
+                        LoginOneActivity.actionStart(WelcomeActivity.this);
                         finish();
                     }
                 });
