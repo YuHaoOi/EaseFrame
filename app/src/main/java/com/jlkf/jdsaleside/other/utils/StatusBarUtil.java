@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Build;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -40,7 +41,7 @@ public class StatusBarUtil {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
-            window.setStatusBarColor(activity.getResources().getColor(colorId));
+            window.setStatusBarColor(ContextCompat.getColor(activity, colorId));
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             transparencyBar(activity);
             SystemBarTintManager tintManager = new SystemBarTintManager(activity);
@@ -49,10 +50,13 @@ public class StatusBarUtil {
         }
     }
 
+    /**
+     * 设置通用状态栏颜色
+     */
     public static void setOiStatusBarColor(Activity activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Window window = activity.getWindow();
-            window.setStatusBarColor(activity.getResources().getColor(R.color.theme_white));
+            window.setStatusBarColor(ContextCompat.getColor(activity, R.color.theme_bg));
         } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
             transparencyBar(activity);
             SystemBarTintManager tintManager = new SystemBarTintManager(activity);
@@ -61,6 +65,9 @@ public class StatusBarUtil {
         }
     }
 
+    /**
+     * 修改状态栏字体为深色
+     */
     public static int StatusBarDarkMode(Activity activity) {
         int result = 0;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
