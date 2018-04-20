@@ -4,11 +4,14 @@ import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jlkf.jdsaleside.R;
@@ -115,6 +118,14 @@ public abstract class BaseFragment extends Fragment implements OnTitleEvent {
         Toast t = Toast.makeText(getActivity(), toast, Toast.LENGTH_SHORT);
         t.show();
         return t;
+    }
+
+    public void snake(CharSequence msg){
+        Snackbar make = Snackbar.make(rootView, msg, Snackbar.LENGTH_SHORT);
+        View view = make.getView();
+        view.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.theme_focus));
+        ((TextView) view.findViewById(R.id.snackbar_text)).setTextColor(ContextCompat.getColor(getContext(), R.color.theme_white));
+        make.show();
     }
 
 

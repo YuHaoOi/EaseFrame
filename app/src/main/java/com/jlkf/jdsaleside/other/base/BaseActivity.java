@@ -8,6 +8,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +18,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jlkf.jdsaleside.R;
@@ -141,11 +144,20 @@ public abstract class BaseActivity extends AppCompatActivity implements OnTitleE
         return t;
     }
 
+    public void snake(CharSequence msg) {
+        Snackbar.make(findViewById(android.R.id.content), msg, Snackbar.LENGTH_SHORT).show();
+        Snackbar make = Snackbar.make(findViewById(android.R.id.content), msg, Snackbar.LENGTH_SHORT);
+        View view = make.getView();
+        view.setBackgroundColor(ContextCompat.getColor(this, R.color.theme_focus));
+        ((TextView) view.findViewById(R.id.snackbar_text)).setTextColor(ContextCompat.getColor(this, R.color.theme_white));
+        make.show();
+    }
 
-    public int gColor(int id){
+
+    public int gColor(int id) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             return getColor(id);
-        }else{
+        } else {
             return this.getResources().getColor(id);
         }
     }
